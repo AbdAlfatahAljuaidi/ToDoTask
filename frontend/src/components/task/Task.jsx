@@ -76,11 +76,11 @@ if(data.error==false){
         <section className='bg-gray-100 w-full mt-20 py-10 '>
          
  <div  className='bg-white mx-7 px-7 py-10'>
- <div className='flex justify-between items-center  '>
+ <div className='flex flex-wrap justify-between items-center  '>
  <input value={taskTitle} onChange={(e) => setTitle(e.target.value)} className='text-2xl font-bold' />
 
    
-   <h1 className={`px-3 py-1 rounded-lg ${task.status == "Pending" ? "bg-yellow-100 text-yellow-500" :task.status == "In Progress" ? "bg-blue-100 text-blue-500" :"bg-green-100 text-green-500" }`}>{task.status}</h1>
+   <h1 className={`px-3 py-1 rounded-lg mt-2 md:mt-0 ${task.status == "Pending" ? "bg-yellow-100 text-yellow-500" :task.status == "In Progress" ? "bg-blue-100 text-blue-500" :"bg-green-100 text-green-500" }`}>{task.status}</h1>
  </div>
  <h1 className='mt-7 text-xl text-gray-500 font-bold'>Description</h1>
  <textarea
@@ -90,7 +90,7 @@ if(data.error==false){
 ></textarea>
 
  
- <div className='flex items-center mt-5 gap-2'>
+ <div className='md:flex items-center mt-5 gap-2'>
  <div>
    <h1 className='text-gray-500 font-bold'>priority</h1>
    <select value={priority} onChange={(e) => setPriority(e.target.value)}>
