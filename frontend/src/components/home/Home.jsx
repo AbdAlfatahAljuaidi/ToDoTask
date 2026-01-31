@@ -1,6 +1,6 @@
 
 import { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,Link } from 'react-router-dom'
 import axios from 'axios'
 import Header from '../header/Header'
 import Menu from '../menu/Menu'
@@ -81,7 +81,8 @@ export default function Home() {
 
           <div className='grid md:grid-cols-3 grid-cols-1 gap-6 mb-5 px-6 mt-5'>
           {filteredTasks.map((task, index) => (
-  <div   onClick={() => router.push(`/task/${task._id}`)} key={index} className="hover:cursor-pointer col-span-1 bg-white py-3 px-4 relative before:h-36 before:w-1 before:absolute before:bg-blue-500 before:left-[-4px] before:top-4 before:z-40 rounded-lg">
+            <Link to={`/task/${task._id}`} key={index} >
+  <div className="hover:cursor-pointer col-span-1 bg-white py-3 px-4 relative before:h-36 before:w-1 before:absolute before:bg-blue-500 before:left-[-4px] before:top-4 before:z-40 rounded-lg">
     <div className='flex items-center z-10'>
     <h1 className={`px-3 py-1 rounded-lg ${task.status == "Pending" ? "bg-yellow-100 text-yellow-500" :task.status == "In Progress" ? "bg-blue-100 text-blue-500" :"bg-green-100 text-green-500" }`}>{task.status}</h1>
     <h1 className={`px-3 py-1 rounded-lg mx-2 ${task.priority == "High" ? "bg-red-100 text-red-500" : task.priority == "Medium" ? "bg-blue-100 text-blue-500" :"bg-green-100 text-green-500" }`}>{task.priority}</h1>
@@ -104,6 +105,7 @@ export default function Home() {
       </div>
     </div>
   </div>
+  </Link>
 ))}
 
 
