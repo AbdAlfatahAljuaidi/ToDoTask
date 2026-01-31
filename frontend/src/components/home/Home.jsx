@@ -60,7 +60,7 @@ export default function Home() {
         <section className='bg-gray-100 w-full mt-20'>
           <div className='md:flex justify-between items-center px-5'>
             <div>
-              <h1 className='p-7 text-4xl font-bold'>My Tasksbvg </h1>
+              <h1 className='p-7 text-4xl font-bold'>My Tasks </h1>
             </div>
             <div>
               <nav>
