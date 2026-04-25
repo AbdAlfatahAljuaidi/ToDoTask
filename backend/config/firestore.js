@@ -1,4 +1,6 @@
 const admin = require('firebase-admin');
+require('dotenv').config();
+console.log(process.env.FIREBASE_PRIVATE_KEY);
 
 admin.initializeApp({
  credential: admin.credential.cert({
