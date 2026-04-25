@@ -1,6 +1,7 @@
 # node
 node_modules/
 .env
+serviceAccountKey.json
 dist/
 build/
 npm-debug.log
